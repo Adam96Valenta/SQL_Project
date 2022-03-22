@@ -6,9 +6,8 @@ WITH czechia_price_and_payroll AS (
 		ROUND(AVG(avg_net_value), 2) AS avg_net_value
 	FROM
 		t_adam_valenta_project_sql_primary_final 
-	WHERE 1=1
-		 AND category_name = 'Chléb konzumní kmínový' 
-		 OR category_name = 'Mléko polotučné pasterované'
+	WHERE  category_name = 'Chléb konzumní kmínový' 
+		OR category_name = 'Mléko polotučné pasterované'
 	GROUP BY year, category_name
 )
 SELECT DISTINCT
