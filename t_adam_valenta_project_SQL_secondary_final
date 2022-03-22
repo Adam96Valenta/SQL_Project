@@ -12,6 +12,4 @@ FROM
 	economies AS e 
 JOIN europe_countries AS ec
 	ON e.country = ec.country
-WHERE 1=1
-	AND e.year >= 2000
-	AND e.year <= 2021;
+WHERE GDP IS NOT NULL;
